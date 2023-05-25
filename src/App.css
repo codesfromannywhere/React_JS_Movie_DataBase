@@ -1,17 +1,59 @@
+body {
+  background-color: whitesmoke;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
 .App {
   text-align: center;
+  margin: 0 7%;
+}
+
+.input-section {
+  display: flex;
+  justify-content: center;
 }
 
 div section button {
-  margin: 5% 2%;
+  margin: 4% 1%;
 }
 
 .movie-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
 .movie-grid div {
-  background-color: lightblue;
+  background-color: #a7c4b5;
+  border-radius: 10px;
+  padding: 10%;
+}
+
+/* .movie-grid div p:nth-of-type(3) {
+  padding-bottom: 5%;
+} */
+
+.movie-grid div>p {
+  padding-bottom: 2%;
+}
+
+.movie-grid div a {
+  text-decoration: none;
+  color: whitesmoke;
+  background-color: #9AA0A8;
+  padding: 7px 30px;
+  margin-top: 70px;
+  border-radius: 7px;
+
+
+}
+
+button {
+  padding: 7px 30px;
+  background-color: darkslategray;
+  border: 1px solid darkslategray;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  color: whitesmoke;
+  /* #9AA0A8 */
 }

@@ -1,11 +1,11 @@
 import movieData from '../data/movieData'
 import MovieItem from './MovieItem';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 // console.log(movieData);
 
 const MovieList = () => {
-    const [movie, setMovie] = useState(movieData)
+    const [movie, setMovie] = useState(movieData);
 
     // sort Asecending
     const sortAscending = () => {
@@ -13,7 +13,6 @@ const MovieList = () => {
         movieData.sort((a, b) => a.year - b.year);
         setMovie(yearAscending)
     }
-
 
     // sort Desecending
     const sortDescending = () => {
@@ -45,7 +44,6 @@ const MovieList = () => {
         setMovie(za)
     }
 
-
     return (
         <div>
             <section>
@@ -55,22 +53,22 @@ const MovieList = () => {
                 <button onClick={sortAZ} >A-Z</button>
                 <button onClick={sortZA}>Z-A</button>
             </section>
+
             <section className="movie-grid">
                 {movieData.map((movie, i) => {
                     return (
                         <MovieItem
                             key={i}
-                            id={movie.id}
                             title={movie.title}
                             year={movie.year}
                             director={movie.director}
                             duration={movie.duration}
                             rate={movie.rate}
                             genre={movie.genre}
+                            id={i}
                         />
                     )
                 })}
-
             </section>
         </div>
     );
